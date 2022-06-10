@@ -3,7 +3,7 @@
 ## Info: <br>
 https://stackoverflow.com/questions/48967495/adding-typescript-to-existing-create-react-app-app
 
-npm install --save typescript @types/node @types/react @types/react-dom @types/jest <br>
+### npm install --save typescript @types/node @types/react @types/react-dom @types/jest <br>
 
 ### tsconfig.json <br>
 
