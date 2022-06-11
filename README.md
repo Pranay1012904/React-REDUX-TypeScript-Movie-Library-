@@ -1,6 +1,6 @@
 # React-REDUX-TypeScript-Movie-Library-
 
-## Info: <br>
+## Info. , that might prove helpful !  <br>
 https://stackoverflow.com/questions/48967495/adding-typescript-to-existing-create-react-app-app
 
 ### npm install --save typescript @types/node @types/react @types/react-dom @types/jest <br>
