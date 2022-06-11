@@ -18,3 +18,27 @@ code {
   border: 2px solid black;
   background-color: darkgrey;
 }
+.btn-row {
+  background-color: aquamarine;
+}
+.card-wrap {
+  background-color: aqua;
+}
+.card-row {
+  background-color: coral;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*------movieCard_component-------*/
+.card-dash {
+  border-radius: 10px;
+}
+.poster-Div {
+  width: 35%;
+}
+.poster-Div img {
+  width: 100%;
+  border-radius: 10px;
+}
