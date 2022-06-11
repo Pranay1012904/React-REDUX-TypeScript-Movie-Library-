@@ -1,7 +1,12 @@
+import Navbar from "./navbar";
 function App() {
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <section className="App-header">
+        <div>
+          <Navbar />
+        </div>
+      </section>
     </div>
   );
 }
