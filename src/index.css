@@ -16,16 +16,11 @@ code {
   width: 100vw;
   min-height: 100vh;
   border: 2px solid black;
-  background-color: darkgrey;
+  background-color: cadetblue;
 }
-.btn-row {
-  background-color: aquamarine;
-}
-.card-wrap {
-  background-color: aqua;
-}
+
 .card-row {
-  background-color: coral;
+  background-color: gainsboro;
   flex-direction: column;
   justify-content: center;
   align-items: center;

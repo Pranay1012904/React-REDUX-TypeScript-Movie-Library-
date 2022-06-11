@@ -10,11 +10,11 @@ function App() {
           <Navbar />
         </div>
       </section>
-      <section className="content">
+      <section className="content my-5">
         <div className="container card-wrap">
           <div className="row d-flex btn-row">
-            <button>btn1</button>
-            <button>btn2</button>
+            <button>Movies</button>
+            <button>Favourites</button>
           </div>
           <div className="row card-row d-flex">
             {data.map((item: propType) => (
