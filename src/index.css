@@ -69,3 +69,16 @@ code {
   display: flex;
   align-items: center;
 }
+/*-------NAVBAR------------*/
+.search-bar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.search-result {
+  position: absolute;
+  min-height: 50px;
+  min-width: 100%;
+  border: 1px solid black;
+  margin-top: 40px;
+}
