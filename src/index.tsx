@@ -2,12 +2,21 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./components/App";
+import { createStore } from "redux";
+import movies from "./reducers/index";
 
+const store = createStore(movies);
+/*console.log("BEFORE DISPATCH:", store.getState());
+store.dispatch({
+  type: "ADD_MOVIES",
+  movies: [{ name: "SUPERMAN" }],------------------for store testing purpose
+});
+console.log("AFTER DISPATCH:", store.getState());*/
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLDivElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <App store={store} />
   </React.StrictMode>
 );
