@@ -17,7 +17,7 @@ class App extends React.Component<{ store: any }, {}> {
   }
   render() {
     const { store } = this.props;
-    const movies = store.getState();
+    const { list } = store.getState();
     return (
       <div className="App">
         <section className="App-header">
@@ -32,7 +32,7 @@ class App extends React.Component<{ store: any }, {}> {
               <button>Favourites</button>
             </div>
             <div className="row card-row d-flex">
-              {movies.map((item: propType) => (
+              {list.map((item: propType) => (
                 <MovieCard movie={item} key={item.Title} />
               ))}
             </div>
