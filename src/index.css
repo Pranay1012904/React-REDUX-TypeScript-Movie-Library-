@@ -82,3 +82,12 @@ code {
   border: 1px solid black;
   margin-top: 40px;
 }
+.flex-fv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn {
+  color: bisque;
+  text-shadow: 1px 1px 1px black;
+}

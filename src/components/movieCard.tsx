@@ -66,9 +66,13 @@ const MovieCard: React.FunctionComponent<movieProp> = ({ movie }) => {
           <div className="card-body">
             <h5 className="card-title">{movie.Title}</h5>
             <p className="card-text">{movie.Plot}</p>
-            <p className="card-text">
+            <div className="card-text flex-fv">
               <small className="text-muted">{movie.Released}</small>
-            </p>
+              <button className="btn btn-warning">
+                <i className="fa fa-star-o" aria-hidden="true"></i>
+                Favourite
+              </button>
+            </div>
           </div>
         </div>
       </div>
