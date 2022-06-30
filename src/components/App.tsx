@@ -69,6 +69,11 @@ class App extends React.Component<any, any> {
                       favourite={this.isFavourite(item)}
                     />
                   ))}
+              {favourites.length == 0 && !this.state.movieTab ? (
+                <div>NO FAVOURITES !!</div>
+              ) : (
+                ""
+              )}
             </div>
           </div>
         </section>
