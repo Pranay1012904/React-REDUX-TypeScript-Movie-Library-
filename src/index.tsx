@@ -2,10 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./components/App";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import combinedReducers from "./reducers/index";
 
-const store = createStore(combinedReducers);
+const logger = function ({ dispatch, getState }: any) {
+  return function (next: any) {
+    return function (action: any) {
+      //middleware code
+      console.log("ACTION_TYPE=", action.type);
+      next(action);
+    };
+  };
+};
+const store = createStore(combinedReducers, applyMiddleware(logger));
 /*console.log("BEFORE DISPATCH:", store.getState());
 store.dispatch({
   type: "ADD_MOVIES",
