@@ -9,12 +9,24 @@ const logger = function ({ dispatch, getState }: any) {
   return function (next: any) {
     return function (action: any) {
       //middleware code
-      console.log("ACTION_TYPE=", action.type);
+      if (typeof action !== "function")
+        console.log("ACTION_TYPE=", action.type);
       next(action);
     };
   };
 };
-const store = createStore(combinedReducers, applyMiddleware(logger));
+
+const thunk =
+  ({ dispatch, getState }: any) =>
+  (next: any) =>
+  (action: any) => {
+    if (typeof action === "function") {
+      action(dispatch);
+      return;
+    }
+    next(action);
+  };
+const store = createStore(combinedReducers, applyMiddleware(logger, thunk));
 /*console.log("BEFORE DISPATCH:", store.getState());
 store.dispatch({
   type: "ADD_MOVIES",

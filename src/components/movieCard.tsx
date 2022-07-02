@@ -1,5 +1,4 @@
 import React from "react";
-import { propType } from "../typeConstants";
 import { addFavourite, removeFavourite } from "../actions";
 interface movieProp {
   movie: {
