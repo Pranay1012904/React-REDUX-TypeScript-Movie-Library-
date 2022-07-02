@@ -37,13 +37,13 @@ class App extends React.Component<any, any> {
   };
   render() {
     const { store } = this.props;
-    const { movies } = store.getState();
+    const { movies, search } = store.getState();
     const { list, favourites } = movies;
     return (
       <div className="App">
         <section className="App-header">
           <div>
-            <Navbar />
+            <Navbar dispatch={store.dispatch} search={search} />
           </div>
         </section>
         <section className="content my-5">
